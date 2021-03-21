@@ -8,15 +8,109 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "SharedVariable",
+"class": "ArrayVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/array/ArrayVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "BasisVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/BasisVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "BoolVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/BoolVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "DictionaryVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/DictionaryVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "FloatVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/FloatVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "IntVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/IntVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "NodePathVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/NodepathVariable.gd"
+}, {
+"base": "Reference",
+"class": "PlayerSkinVariable",
+"language": "GDScript",
+"path": "res://elements/PlayerSkinVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "PoolStringArrayVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/array/PoolStringArrayVariable.gd"
+}, {
+"base": "Reference",
+"class": "SharedInspector",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/inspector_plugin/SharedInspector.gd"
+}, {
+"base": "Resource",
+"class": "SharedVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/_Variable.gd"
+}, {
+"base": "SharedVariable",
+"class": "StringVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/StringVariable.gd"
+}, {
+"base": "SharedVariable",
+"class": "StringVariableArray",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/StringVariableArray.gd"
+}, {
+"base": "SharedVariable",
+"class": "Vector2Variable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/Vector2Variable.gd"
+}, {
+"base": "Reference",
+"class": "eh_Serializer",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/eh_Serializer.gd"
+} ]
 _global_script_class_icons={
-
+"ArrayVariable": "",
+"BasisVariable": "",
+"BoolVariable": "",
+"DictionaryVariable": "",
+"FloatVariable": "",
+"IntVariable": "",
+"NodePathVariable": "",
+"PlayerSkinVariable": "",
+"PoolStringArrayVariable": "",
+"SharedInspector": "",
+"SharedVariable": "",
+"StringVariable": "",
+"StringVariableArray": "",
+"Vector2Variable": "",
+"eh_Serializer": ""
 }
 
 [application]
 
 config/name="eh_SharedVariables"
+run/main_scene="res://SharedVariablesDemo.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "eh_jogos.shared_variables" )
 
 [rendering]
 
