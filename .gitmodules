@@ -1,0 +1,4 @@
+[submodule "addons/eh_jogos.shared_variables"]
+	path = addons/eh_jogos.shared_variables
+	url = git@github.com:eh-jogos/eh_SharedVariables.git
+	branch = submodule
