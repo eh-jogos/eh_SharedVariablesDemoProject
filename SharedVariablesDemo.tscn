@@ -87,47 +87,47 @@ custom_constants/separation = 15
 alignment = 1
 
 [node name="MaxHpUpgrade" type="Button" parent="VBoxContainer/Menu"]
-margin_left = 164.0
-margin_right = 358.0
+margin_left = 169.0
+margin_right = 363.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 1 )
 text = "Max HP Upgrade"
 
 [node name="TakeDamage" type="Button" parent="VBoxContainer/Menu"]
-margin_left = 373.0
-margin_right = 530.0
+margin_left = 378.0
+margin_right = 535.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 1 )
 text = "Take Damage"
 
 [node name="Heal" type="Button" parent="VBoxContainer/Menu"]
-margin_left = 545.0
-margin_right = 610.0
+margin_left = 550.0
+margin_right = 615.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 1 )
 text = "Heal"
 
 [node name="Save" type="Button" parent="VBoxContainer/Menu"]
-margin_left = 625.0
-margin_right = 696.0
+margin_left = 630.0
+margin_right = 701.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 1 )
 text = "Save"
 
 [node name="Load" type="Button" parent="VBoxContainer/Menu"]
-margin_left = 711.0
-margin_right = 776.0
+margin_left = 716.0
+margin_right = 781.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 1 )
 text = "Load"
 
 [node name="SkinOptionButton" type="OptionButton" parent="VBoxContainer/Menu"]
-margin_left = 791.0
-margin_right = 859.0
+margin_left = 796.0
+margin_right = 854.0
 margin_bottom = 34.0
-text = "Green"
+text = "Blue"
 items = [ "Blue", null, false, 0, null, "Yellow", null, false, 1, null, "Green", null, false, 2, null ]
-selected = 2
+selected = 0
 script = ExtResource( 11 )
 __meta__ = {
 "_player_skin": ExtResource( 9 )
@@ -188,7 +188,7 @@ margin_right = 199.0
 margin_bottom = 161.0
 size_flags_horizontal = 0
 custom_fonts/font = SubResource( 3 )
-text = "player_skin: 2"
+text = "player_skin: 0"
 align = 0
 shared_variable = ExtResource( 9 )
 [connection signal="pressed" from="VBoxContainer/Menu/MaxHpUpgrade" to="." method="_on_MaxHpUpgrade_pressed"]
