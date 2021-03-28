@@ -11,9 +11,13 @@ extends VBoxContainer
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
+#sv-export
 var health_max: IntVariable = IntVariable.new()
+#sv-export
 var health_current: IntVariable = IntVariable.new()
+#sv-export
 var player_name: StringVariable = StringVariable.new()
+#sv-export
 var player_skin: PlayerSkinVariable = PlayerSkinVariable.new()
 
 #--- private variables - order: export > normal var > onready -------------------------------------
@@ -87,34 +91,3 @@ func _on_health_current_value_updated() -> void:
 	update_sprite_animation()
 
 ### -----------------------------------------------------------------------------------------------
-
-
-###################################################################################################
-### Shared Variables Editor Methods ###############################################################
-###################################################################################################
-
-var inspector_helper = SharedInspector.new(
-	self, 
-	[
-		"health_max", 
-		"health_current",
-		"player_name",
-		"player_skin",
-	]
-)
-
-func _set(property: String, value) -> bool:
-	var has_handled: = false
-	has_handled = inspector_helper._set(property, value)
-	return has_handled
-
-
-func _get(property: String):
-	var to_return = null
-	to_return = inspector_helper._get(property)
-	return to_return
-
-
-func _get_property_list() -> Array:
-	var properties: Array = inspector_helper._get_property_list()
-	return properties

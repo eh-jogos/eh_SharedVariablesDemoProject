@@ -13,7 +13,9 @@ extends MarginContainer
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
+#sv-export
 var _health_max: IntVariable = IntVariable.new()
+#sv-export
 var _health_current: IntVariable = IntVariable.new()
 
 onready var _resources: ResourcePreloader = $ResourcePreloader
@@ -83,26 +85,3 @@ func _on_health_current_value_updated() -> void:
 	_handle_current_hp()
 
 ### -----------------------------------------------------------------------------------------------
-
-
-###################################################################################################
-### Shared Variables Editor Methods ###############################################################
-###################################################################################################
-
-var inspector_helper = SharedInspector.new(self, ["_health_max", "_health_current"])
-
-func _set(property: String, value) -> bool:
-	var has_handled: = false
-	has_handled = inspector_helper._set(property, value)
-	return has_handled
-
-
-func _get(property: String):
-	var to_return = null
-	to_return = inspector_helper._get(property)
-	return to_return
-
-
-func _get_property_list() -> Array:
-	var properties: Array = inspector_helper._get_property_list()
-	return properties
