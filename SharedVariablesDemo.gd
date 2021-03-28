@@ -17,9 +17,13 @@ const MAX_HP = 48
 
 export(String, FILE) var _save_location: String = "user://save.json"
 
+#sv-export
 var _player_hp_max: IntVariable = IntVariable.new()
+#sv-export
 var _player_hp_current: IntVariable = IntVariable.new()
+#sv-export
 var _player_name: StringVariable = StringVariable.new()
+#sv-export
 var _player_skin: IntVariable = IntVariable.new()
 
 onready var _load_button: Button = $VBoxContainer/Menu/Load
