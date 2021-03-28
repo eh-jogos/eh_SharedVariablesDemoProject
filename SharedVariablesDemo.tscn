@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://elements/LifeBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://elements/HeroPanel.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://shared_variables/player_skin.tres" type="Resource" id=9]
 [ext_resource path="res://shared_variables/player_name.tres" type="Resource" id=10]
 [ext_resource path="res://elements/SkinOptionButton.gd" type="Script" id=11]
+[ext_resource path="res://addons/eh_jogos.shared_variables/inspector_plugin/SVEditorControls.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -37,6 +38,10 @@ __meta__ = {
 "_player_name": ExtResource( 10 ),
 "_player_skin": ExtResource( 9 )
 }
+
+[node name="SVEditorControls" type="Node" parent="."]
+script = ExtResource( 13 )
+properties_to_expose = PoolStringArray( "_player_hp_max", "_player_hp_current", "_player_name", "_player_skin" )
 __player_hp_max = ExtResource( 8 )
 __player_hp_current = ExtResource( 7 )
 __player_name = ExtResource( 10 )
@@ -116,6 +121,10 @@ script = ExtResource( 11 )
 __meta__ = {
 "_player_skin": ExtResource( 9 )
 }
+
+[node name="SVEditorControls" type="Node" parent="VBoxContainer/Menu/SkinOptionButton"]
+script = ExtResource( 13 )
+properties_to_expose = PoolStringArray( "_player_skin" )
 __player_skin = ExtResource( 9 )
 
 [node name="DebugPanel" type="PanelContainer" parent="VBoxContainer"]
