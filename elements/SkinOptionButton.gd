@@ -13,6 +13,7 @@ extends OptionButton
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
+#sv-export
 var _player_skin: PlayerSkinVariable = PlayerSkinVariable.new() setget _set_player_skin
 
 ### -----------------------------------------------------------------------------------------------

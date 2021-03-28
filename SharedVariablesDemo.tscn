@@ -41,7 +41,6 @@ __meta__ = {
 
 [node name="SVEditorControls" type="Node" parent="."]
 script = ExtResource( 13 )
-properties_to_expose = PoolStringArray( "_player_hp_max", "_player_hp_current", "_player_name", "_player_skin" )
 __player_hp_max = ExtResource( 8 )
 __player_hp_current = ExtResource( 7 )
 __player_name = ExtResource( 10 )
@@ -124,8 +123,6 @@ __meta__ = {
 
 [node name="SVEditorControls" type="Node" parent="VBoxContainer/Menu/SkinOptionButton"]
 script = ExtResource( 13 )
-properties_to_expose = PoolStringArray( "_player_skin" )
-__player_skin = ExtResource( 9 )
 
 [node name="DebugPanel" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 392.0
