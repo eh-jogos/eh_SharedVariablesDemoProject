@@ -44,7 +44,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/NodepathVariable.gd"
 }, {
-"base": "Reference",
+"base": "IntVariable",
 "class": "PlayerSkinVariable",
 "language": "GDScript",
 "path": "res://elements/PlayerSkinVariable.gd"
@@ -53,6 +53,11 @@ _global_script_classes=[ {
 "class": "PoolStringArrayVariable",
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/array/PoolStringArrayVariable.gd"
+}, {
+"base": "Node",
+"class": "SVEditorControls",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/inspector_plugin/SVEditorControls.gd"
 }, {
 "base": "Reference",
 "class": "SharedInspector",
@@ -79,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/Vector2Variable.gd"
 }, {
+"base": "SharedVariable",
+"class": "Vector3Variable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/Vector3Variable.gd"
+}, {
 "base": "Reference",
 "class": "eh_Serializer",
 "language": "GDScript",
@@ -94,19 +104,21 @@ _global_script_class_icons={
 "NodePathVariable": "",
 "PlayerSkinVariable": "",
 "PoolStringArrayVariable": "",
+"SVEditorControls": "",
 "SharedInspector": "",
 "SharedVariable": "",
 "StringVariable": "",
 "StringVariableArray": "",
 "Vector2Variable": "",
+"Vector3Variable": "",
 "eh_Serializer": ""
 }
 
 [application]
 
-config/name="eh_SharedVariables"
+config/name="eh_SharedVariables Demo Project"
 run/main_scene="res://SharedVariablesDemo.tscn"
-config/icon="res://icon.png"
+config/icon="res://shared_variables_icon.png"
 
 [editor_plugins]
 
