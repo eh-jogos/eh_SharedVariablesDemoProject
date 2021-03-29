@@ -32,15 +32,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
 __meta__ = {
-"_edit_use_anchors_": false,
+"_edit_use_anchors_": false
+}
+
+[node name="SVEditorControls" type="Node" parent="."]
+script = ExtResource( 13 )
+__meta__ = {
 "_player_hp_current": ExtResource( 7 ),
 "_player_hp_max": ExtResource( 8 ),
 "_player_name": ExtResource( 10 ),
 "_player_skin": ExtResource( 9 )
 }
-
-[node name="SVEditorControls" type="Node" parent="."]
-script = ExtResource( 13 )
 __player_hp_max = ExtResource( 8 )
 __player_hp_current = ExtResource( 7 )
 __player_name = ExtResource( 10 )
@@ -64,6 +66,10 @@ size_flags_horizontal = 4
 
 [node name="SVEditorControls" type="Node" parent="VBoxContainer/LifeBar"]
 script = ExtResource( 13 )
+__meta__ = {
+"_health_current": ExtResource( 7 ),
+"_health_max": ExtResource( 8 )
+}
 __health_max = ExtResource( 8 )
 __health_current = ExtResource( 7 )
 
@@ -74,6 +80,12 @@ margin_bottom = 318.0
 
 [node name="SVEditorControls" type="Node" parent="VBoxContainer/Player"]
 script = ExtResource( 13 )
+__meta__ = {
+"health_current": ExtResource( 7 ),
+"health_max": ExtResource( 8 ),
+"player_name": ExtResource( 10 ),
+"player_skin": ExtResource( 9 )
+}
 _health_max = ExtResource( 8 )
 _health_current = ExtResource( 7 )
 _player_name = ExtResource( 10 )
@@ -129,12 +141,12 @@ text = "Blue"
 items = [ "Blue", null, false, 0, null, "Yellow", null, false, 1, null, "Green", null, false, 2, null ]
 selected = 0
 script = ExtResource( 11 )
-__meta__ = {
-"_player_skin": ExtResource( 9 )
-}
 
 [node name="SVEditorControls" type="Node" parent="VBoxContainer/Menu/SkinOptionButton"]
 script = ExtResource( 13 )
+__meta__ = {
+"_player_skin": ExtResource( 9 )
+}
 __player_skin = ExtResource( 9 )
 
 [node name="DebugPanel" type="PanelContainer" parent="VBoxContainer"]
