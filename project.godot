@@ -89,6 +89,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/Vector3Variable.gd"
 }, {
+"base": "Node",
+"class": "eh_ResetOnExit",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/eh_ResetOnExit.gd"
+}, {
+"base": "Resource",
+"class": "eh_Resetable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/eh_Resetable.gd"
+}, {
 "base": "Reference",
 "class": "eh_Serializer",
 "language": "GDScript",
@@ -111,6 +121,8 @@ _global_script_class_icons={
 "StringVariableArray": "",
 "Vector2Variable": "",
 "Vector3Variable": "",
+"eh_ResetOnExit": "",
+"eh_Resetable": "",
 "eh_Serializer": ""
 }
 

@@ -3,6 +3,7 @@
 [ext_resource path="res://addons/eh_jogos.shared_variables/variables/IntVariable.gd" type="Script" id=1]
 
 [resource]
+resource_name = "player_hp_max.tres"
 script = ExtResource( 1 )
 __meta__ = {
 "default_value": 10,
