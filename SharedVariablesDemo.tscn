@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://elements/LifeBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://elements/HeroPanel.tscn" type="PackedScene" id=2]
@@ -11,7 +11,9 @@
 [ext_resource path="res://shared_variables/player_skin.tres" type="Resource" id=9]
 [ext_resource path="res://shared_variables/player_name.tres" type="Resource" id=10]
 [ext_resource path="res://elements/SkinOptionButton.gd" type="Script" id=11]
+[ext_resource path="res://addons/eh_jogos.shared_variables/inspector_plugin/eh_CustomEditorControls.gd" type="Script" id=12]
 [ext_resource path="res://addons/eh_jogos.shared_variables/inspector_plugin/SVEditorControls.gd" type="Script" id=13]
+[ext_resource path="res://addons/eh_jogos.shared_variables/variables/IntVariable.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -26,6 +28,13 @@ font_data = ExtResource( 6 )
 size = 22
 use_filter = true
 font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=4]
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 14 )
+is_session_only = false
+value = 0
 
 [node name="SharedVariablesDemo" type="Control"]
 anchor_right = 1.0
@@ -42,6 +51,10 @@ __meta__ = {
 "_player_hp_max": ExtResource( 8 ),
 "_player_name": ExtResource( 10 ),
 "_player_skin": ExtResource( 9 )
+}
+settings = {
+"#cr-export": "Custom Resources",
+"#sv-export": "Shared Variables"
 }
 __player_hp_max = ExtResource( 8 )
 __player_hp_current = ExtResource( 7 )
@@ -70,6 +83,10 @@ __meta__ = {
 "_health_current": ExtResource( 7 ),
 "_health_max": ExtResource( 8 )
 }
+settings = {
+"#cr-export": "Custom Resources",
+"#sv-export": "Shared Variables"
+}
 __health_max = ExtResource( 8 )
 __health_current = ExtResource( 7 )
 
@@ -85,6 +102,10 @@ __meta__ = {
 "health_max": ExtResource( 8 ),
 "player_name": ExtResource( 10 ),
 "player_skin": ExtResource( 9 )
+}
+settings = {
+"#cr-export": "Custom Resources",
+"#sv-export": "Shared Variables"
 }
 _health_max = ExtResource( 8 )
 _health_current = ExtResource( 7 )
@@ -147,6 +168,10 @@ script = ExtResource( 13 )
 __meta__ = {
 "_player_skin": ExtResource( 9 )
 }
+settings = {
+"#cr-export": "Custom Resources",
+"#sv-export": "Shared Variables"
+}
 __player_skin = ExtResource( 9 )
 
 [node name="DebugPanel" type="PanelContainer" parent="VBoxContainer"]
@@ -175,6 +200,15 @@ margin_bottom = 71.0
 custom_fonts/font = SubResource( 3 )
 text = "player_state: alive"
 align = 0
+
+[node name="eh_CustomEditorControls" type="Node" parent="VBoxContainer/DebugPanel/VBoxContainer/PlayerState"]
+script = ExtResource( 12 )
+settings = {
+"#cr-export": "Custom Resources",
+"#sv-export": "Teste"
+}
+_pqp = SubResource( 4 )
+_bosta = SubResource( 5 )
 
 [node name="HpMax" parent="VBoxContainer/DebugPanel/VBoxContainer" instance=ExtResource( 3 )]
 margin_top = 75.0
