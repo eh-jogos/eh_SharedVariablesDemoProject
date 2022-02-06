@@ -45,6 +45,14 @@ func _ready() -> void:
 
 ### Public Methods --------------------------------------------------------------------------------
 
+static func sort_load_order(a: String, b: String) -> bool:
+	var to_return: = a < b
+	if b == "_player_hp_max" and a == "_player_hp_current":
+		to_return = false
+	elif a == "_player_hp_max" and b == "_player_hp_current":
+		to_return = true
+	return to_return
+
 ### -----------------------------------------------------------------------------------------------
 
 
@@ -64,7 +72,7 @@ func _on_Heal_pressed() -> void:
 
 func _on_Save_pressed() -> void:
 	var save_dict: Dictionary = {}
-	var elements_to_save = ["_player_hp_current", "_player_hp_max", "_player_name", "_player_skin"]
+	var elements_to_save = ["_player_hp_max", "_player_hp_current", "_player_name", "_player_skin"]
 	
 	for index in elements_to_save.size():
 		var shared_variable: SharedVariable = get(elements_to_save[index])
@@ -86,8 +94,10 @@ func _on_Load_pressed() -> void:
 	file.close()
 	
 	var loaded_dict: Dictionary = str2var(loaded_data)
+	var sorted_keys: = loaded_dict.keys()
+	sorted_keys.sort_custom(self, "sort_load_order")
 	
-	for variable in loaded_dict.keys():
+	for variable in sorted_keys:
 		var shared_variable: SharedVariable = get(variable)
 		shared_variable.load_dict(loaded_dict[variable])
 
