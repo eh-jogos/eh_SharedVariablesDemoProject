@@ -19,7 +19,7 @@ var _health_max: IntVariable = IntVariable.new()
 var _health_current: IntVariable = IntVariable.new()
 
 onready var _resources: ResourcePreloader = $ResourcePreloader
-onready var _root: HBoxContainer = $Root
+onready var _root: GridContainer = $Root
 
 ### -----------------------------------------------------------------------------------------------
 
@@ -60,13 +60,13 @@ func _handle_max_hearts() -> void:
 
 func _handle_current_hp() -> void:
 	var full_hearts: int = floor(_health_current.value / 2.0)
-	var halth_hearts: = _health_current.value % 2
+	var half_hearts: = _health_current.value % 2
 	
 	for index in _root.get_child_count():
 		var heart = _root.get_child(index)
 		if index < full_hearts:
 			heart.value = 2
-		elif index == full_hearts and halth_hearts > 0:
+		elif index == full_hearts and half_hearts > 0:
 			heart.value = 1
 		else:
 			heart.value = 0
