@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/BoolVariable.gd"
 }, {
+"base": "PanelContainer",
+"class": "DebugPrintPanel",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/debug_print_panel/DebugPrintPanel.gd"
+}, {
 "base": "SharedVariable",
 "class": "DictionaryVariable",
 "language": "GDScript",
@@ -75,6 +80,11 @@ _global_script_classes=[ {
 "path": "res://addons/eh_jogos.shared_variables/variables/StringVariableArray.gd"
 }, {
 "base": "SharedVariable",
+"class": "TextureVariable",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/variables/TextureVariable.gd"
+}, {
+"base": "SharedVariable",
 "class": "Vector2Variable",
 "language": "GDScript",
 "path": "res://addons/eh_jogos.shared_variables/variables/Vector2Variable.gd"
@@ -87,32 +97,108 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "eh_CustomEditorControls",
 "language": "GDScript",
-"path": "res://addons/eh_jogos.shared_variables/inspector_plugin/eh_CustomEditorControls.gd"
+"path": "res://addons/eh_jogos.utilities/custom_nodes/eh_CustomEditorControls.gd"
 }, {
 "base": "Reference",
 "class": "eh_CustomInspector",
 "language": "GDScript",
-"path": "res://addons/eh_jogos.shared_variables/inspector_plugin/eh_CustomInspector.gd"
+"path": "res://addons/eh_jogos.utilities/helpers/eh_CustomInspector.gd"
+}, {
+"base": "Reference",
+"class": "eh_DebugLogger",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/static/eh_DebugLogger.gd"
+}, {
+"base": "Reference",
+"class": "eh_DirectoryHelpers",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/static/eh_DirectoryHelpers.gd"
+}, {
+"base": "Reference",
+"class": "eh_EditorHelpers",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/static/eh_EditorHelpers.gd"
+}, {
+"base": "Position2D",
+"class": "eh_GridPosition",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/2d/eh_GridPosition.gd"
+}, {
+"base": "Reference",
+"class": "eh_InspectorHelper",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/static/eh_InspectorHelper.gd"
+}, {
+"base": "Node",
+"class": "eh_NodePathSetter",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/helper_nodes/eh_NodePathSetter.gd"
+}, {
+"base": "eh_TransformTween",
+"class": "eh_QuatTween",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/tween/eh_QuatTween.gd"
+}, {
+"base": "Node",
+"class": "eh_RemoteRect",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/control/eh_RemoteRect.gd"
+}, {
+"base": "Node",
+"class": "eh_RemoteVisibility",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/eh_RemoteVisibility.gd"
 }, {
 "base": "Node",
 "class": "eh_ResetOnExit",
 "language": "GDScript",
-"path": "res://addons/eh_jogos.shared_variables/eh_ResetOnExit.gd"
+"path": "res://addons/eh_jogos.utilities/custom_nodes/eh_ResetOnExit.gd"
 }, {
 "base": "Resource",
 "class": "eh_Resetable",
 "language": "GDScript",
-"path": "res://addons/eh_jogos.shared_variables/eh_Resetable.gd"
+"path": "res://addons/eh_jogos.utilities/custom_resources/eh_Resetable.gd"
 }, {
 "base": "Reference",
 "class": "eh_Serializer",
 "language": "GDScript",
-"path": "res://addons/eh_jogos.shared_variables/eh_Serializer.gd"
+"path": "res://addons/eh_jogos.utilities/helpers/static/eh_Serializer.gd"
+}, {
+"base": "Node",
+"class": "eh_Shaker2D",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/2d/eh_Shaker2D.gd"
+}, {
+"base": "Node",
+"class": "eh_State",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/state_pattern/State.gd"
+}, {
+"base": "Node",
+"class": "eh_StateMachine",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/state_pattern/StateMachine.gd"
+}, {
+"base": "Node",
+"class": "eh_TextureSetter",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.shared_variables/helper_nodes/eh_TextureSetter.gd"
+}, {
+"base": "Reference",
+"class": "eh_TransformTween",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/helpers/tween/eh_TransformTween.gd"
+}, {
+"base": "Node",
+"class": "eh_shaker3D",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.utilities/custom_nodes/3d/eh_Shaker3D.gd"
 } ]
 _global_script_class_icons={
 "ArrayVariable": "",
 "BasisVariable": "",
 "BoolVariable": "",
+"DebugPrintPanel": "",
 "DictionaryVariable": "",
 "FloatVariable": "",
 "IntVariable": "",
@@ -123,13 +209,29 @@ _global_script_class_icons={
 "SharedVariable": "",
 "StringVariable": "",
 "StringVariableArray": "",
+"TextureVariable": "",
 "Vector2Variable": "",
 "Vector3Variable": "",
 "eh_CustomEditorControls": "",
 "eh_CustomInspector": "",
+"eh_DebugLogger": "",
+"eh_DirectoryHelpers": "",
+"eh_EditorHelpers": "",
+"eh_GridPosition": "",
+"eh_InspectorHelper": "",
+"eh_NodePathSetter": "",
+"eh_QuatTween": "",
+"eh_RemoteRect": "",
+"eh_RemoteVisibility": "",
 "eh_ResetOnExit": "",
 "eh_Resetable": "",
-"eh_Serializer": ""
+"eh_Serializer": "",
+"eh_Shaker2D": "",
+"eh_State": "",
+"eh_StateMachine": "",
+"eh_TextureSetter": "",
+"eh_TransformTween": "",
+"eh_shaker3D": ""
 }
 
 [application]
@@ -145,7 +247,11 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/eh_jogos.shared_variables/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/eh_jogos.shared_variables/plugin.cfg", "res://addons/eh_jogos.utilities/plugin.cfg" )
+
+[eh_utilities]
+
+logging_enabled=false
 
 [rendering]
 
